@@ -99,9 +99,6 @@ function initThemeToggle() {
         
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
-        
-        // Add a smooth transition effect
-        document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
     });
 }
 
