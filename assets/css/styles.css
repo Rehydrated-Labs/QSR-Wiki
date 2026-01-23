@@ -103,6 +103,7 @@ a {
 
 nav ul, nav ol, nav li {
     margin: 0;
+    padding: 0;
 }
 
 .nav-list {
