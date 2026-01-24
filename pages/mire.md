@@ -1,4 +1,5 @@
 ---
+permalink: /mire/
 layout: wiki-article
 infobox:
   type: substances

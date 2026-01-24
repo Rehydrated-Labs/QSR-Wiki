@@ -1,4 +1,5 @@
 ---
+permalink: /peat_bog/
 layout: wiki-article
 infobox:
   type: substances

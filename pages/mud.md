@@ -1,4 +1,5 @@
 ---
+permalink: /mud/
 layout: wiki-article
 infobox:
   type: substances

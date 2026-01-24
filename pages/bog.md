@@ -1,4 +1,5 @@
 ---
+permalink: /bog/
 layout: wiki-article
 infobox:
   type: substances
