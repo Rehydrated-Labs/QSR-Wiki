@@ -11,10 +11,8 @@ The mod currently has four planned companion mods beyond Quicksand Rehydrated:
 
 - [Quicksand Core]({% link pages/quicksand-core.md %}) — A more modpack-friendly version of QSR with terrain-themed hazards & structrues and [Hunnibees]({% link pages/hunnibees.md %}).
 - [Quicksand Glacéed]({% link pages/quicksand-glaceed.md %}) — An addon that includes a candy world dimension and expands QSR's optional content.
-- Quicksand Laboratory
-- Quicksand Carnivores
-
-At the time of writing (January 22, 2026), I could not find info about the QS Laboratory and QS Carnivores companion mods. It was found listed in this Google Sheet made by Emblem: [QSR Wiki and Mod Planning](https://docs.google.com/spreadsheets/d/1mXdd2MN0EUf2hOWrWy8Gl7ejlJaeW5cSGVZ67DlmD_k/edit?pli=1&gid=0#gid=0).
+- Quicksand Laboratory — Adds an industrial structure similar to Minecraft's stronghold, which has new resources, machines, and hazards.
+- Quicksand Carnivores — Adds a wider variety of mobs to the game.
 
 ## Mechanics
 
@@ -61,11 +59,11 @@ At the time of writing (January 22, 2026), I could not find info about the QS La
 
 ## Substances
 
-- Mire
-- Deep Mud
-- Bog
-- Peat Bog
-- Marsh
+- [Mire]({% link pages/mire.md %})
+- [Deep Mud]({% link pages/mud.md %})
+- [Bog]({% link pages/bog.md %})
+- [Peat Bog]({% link pages/peat_bog.md %})
+- [Marsh]({% link pages/marsh.md %})
 - Brown Clay
 - Liquid Clay
 - Grey Clay
