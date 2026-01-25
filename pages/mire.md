@@ -8,6 +8,7 @@ infobox:
   stability: Unstable
   buoyancy: "Chest level, no idle resurfacing"
 ---
+# Mire
 **Mire** is a sinking mud based on the vanilla Minecraft dirt block, taking on a more wet and smooth appearance. It is fairly dense, heavy, and sticky. It is more difficult to escape than [Deep Mud]({% link pages/mud.md %})
 
 ## Generation

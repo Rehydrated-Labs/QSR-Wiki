@@ -202,7 +202,40 @@ function initNavDropdown() {
         }
     });
 }
-
+    
+function initSearch() {
+    const input = document.getElementById('search-input');
+    const results = document.getElementById('results-container');
+    if (!input || !results) return;
+    const searchUrl = input.dataset.searchJson || '/search.json';
+    const s = document.createElement('script');
+    s.src = "https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js";
+    s.onload = () => {
+        SimpleJekyllSearch({
+            searchInput: input,
+            resultsContainer: results,
+            json: searchUrl,
+            searchResultTemplate: `
+            <li class="sjr-item">
+                <a href="{url}">
+                <strong>{title}</strong>
+                </a>
+                <small style="margin-left:.5rem; opacity:.7">({type})</small>
+                <div class="sjr-excerpt">{content}</div>
+            </li>`,
+            noResultsText: 'No results',
+            limit: 50,
+            fields: ['title','content']
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement !== input) {
+                e.preventDefault();
+                input.focus();
+            }
+        });
+    };
+    document.body.appendChild(s);
+}
 // Initialize Everything
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -212,6 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initSidebarToggle();
     initSmoothScroll();
     initBackToTop();
-    
+    initSearch();
     console.log('JS loaded');
 });

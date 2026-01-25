@@ -10,6 +10,16 @@
                 </button>
                 <ul class="nav-list">
                     <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">Substances</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="{{site.baseurl}}/bog" class="nav-dropdown-link">Bog</a></li>
+                            <li><a href="{{site.baseurl}}/marsh" class="nav-dropdown-link">Marsh</a></li>
+                            <li><a href="{{site.baseurl}}/mire" class="nav-dropdown-link">Mire</a></li>
+                            <li><a href="{{site.baseurl}}/mud" class="nav-dropdown-link">Deep mud</a></li>
+                            <li><a href="{{site.baseurl}}/peat_bog" class="nav-dropdown-link">Peat bog</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">Blocks</a>
                         <ul class="nav-dropdown">
                             <li><a href="https://example.com" class="nav-dropdown-link">Page 1</a></li>
@@ -25,6 +35,17 @@
                             <li><a href="https://example.com" class="nav-dropdown-link">Page 3</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">Misc</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="{{site.baseurl}}/hunnibees" class="nav-dropdown-link">Hunnibee</a></li>
+                            <li><a href="{{site.baseurl}}/quicksand-core" class="nav-dropdown-link">Quicksand core</a></li>
+                            <li><a href="{{site.baseurl}}/quicksand-glaceed" class="nav-dropdown-link">Quicksand glaceed</a></li>
+                            <li><a href="{{site.baseurl}}/quicksand-rehydrated" class="nav-dropdown-link">Quicksand rehydrated</a></li>
+                        </ul>
+                    </li>
+                    <input id="search-input" type="search" placeholder="Search the wiki…" autocomplete="off" data-search-json="{{ '/search.json' | relative_url }}" />
+                    <ul id="results-container" class="search-results"></ul>
                 </ul>
             </nav>
             <div class="header-actions">

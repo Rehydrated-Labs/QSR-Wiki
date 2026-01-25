@@ -1,0 +1,43 @@
+---
+layout: none
+---
+[
+{% assign sep = "" %}
+{% for item in site.pages %}
+  {% comment %} only pages under the pages/ folder and not explicitly excluded {% endcomment %}
+  {% if item.path contains 'pages/' and item.search != false %}
+    {% comment %} render cleaned, truncated content for indexing {% endcomment %}
+    {% assign content_text = item.content | markdownify | strip_html | strip_newlines | replace: '\r', '' | replace: '\n', ' ' | strip | truncatewords: 120 %}
+
+    {% comment %} page-level entry (only if it has a title) {% endcomment %}
+    {% if item.title %}
+      {% if sep != "" %},{% endif %}
+      {% assign sep = "," %}
+      {
+        "title": {{ item.title | jsonify }},
+        "url": {{ item.url | relative_url | jsonify }},
+        "content": {{ content_text | jsonify }},
+        "type": "page"
+      }
+    {% endif %}
+
+    {% comment %} one entry per top-level H1 in the raw markdown source {% endcomment %}
+    {% assign lines = item.content | split: '\n' %}
+    {% for line in lines %}
+      {% assign prefix = line | slice: 0, 2 %}
+      {% if prefix == '# ' %}
+        {% assign heading_text = line | remove_first: '# ' | strip %}
+        {% assign heading_id = heading_text | slugify %}
+        {% if sep != "" %},{% endif %}
+        {% assign sep = "," %}
+        {
+          "title": {{ heading_text | jsonify }},
+          "url": {{ item.url | relative_url | append: '#' | append: heading_id | jsonify }},
+          "content": {{ content_text | jsonify }},
+          "type": "heading"
+        }
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+]
